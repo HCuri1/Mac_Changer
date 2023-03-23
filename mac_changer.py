@@ -16,4 +16,4 @@ subprocess.call(f"ifconfig {interface} down", shell=True)
 subprocess.call(f"ifconfig {interface} hw ether {newMac}", shell=True)
 subprocess.call(f"ifconfig {interface} up", shell=True)
 
-print(f"[+] {interface} MAC Adress changed to {newMac}")
+print(f"\n[+] {interface} MAC Adress changed to {newMac}")
