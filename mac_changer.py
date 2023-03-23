@@ -12,8 +12,8 @@ print("- Type 'd' for the original\n\n")
 
 newMac=str(input("New Mac: ")).strip()
 
-subprocess.call(f"ifconfig {interface} down", shell=True)
-subprocess.call(f"ifconfig {interface} hw ether {newMac}", shell=True)
-subprocess.call(f"ifconfig {interface} up", shell=True)
+subprocess.call(["ifconfig", interface, "up"])
+subprocess.call(["ifconfig", interface, "hw", "ether", newMac])
+subprocess.call(["ifconfig", interface, "up"])
 
 print(f"\n[+] {interface} MAC Adress changed to {newMac}")
