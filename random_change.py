@@ -1,2 +1,2 @@
-def random_change():
-    print("hello world!")
+def randomChange(interface):
+    print(interface)

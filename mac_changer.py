@@ -17,11 +17,11 @@ newMac=str(input("New Mac: ")).strip()
 
 if not newMac:
     
-    print("null")
+    random_change.randomChange(interface)
     
 elif (newMac=="d"):
     
-    print("default")
+    default_change.defaultChange(interface)
 
 else:
     
