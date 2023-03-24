@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 
 ifconfig $1 down
 macchanger -p $1
