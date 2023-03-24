@@ -3,7 +3,6 @@
 import subprocess
 import optparse
 import default_change
-import check_mac
 import random_change
 
 subprocess.call(["chmod", "+x", "changer.sh"])
@@ -38,11 +37,6 @@ else:
         random_change.randomChange(interface)
 
     else:
-        
-        if check_mac.checkMac(newMac) == True:
             
-            subprocess.call(["./changer.sh", interface, newMac])
+        subprocess.call(["./changer.sh", interface, newMac])
             
-        else:
-            
-            print("Invalid MAC Adress!")
