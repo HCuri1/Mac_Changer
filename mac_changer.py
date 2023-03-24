@@ -25,7 +25,7 @@ print("---- MAC Changer ----\n\n")
 
 if not interface:
     
-    print("[ERROR] Set an interface!")
+    parser.error("[-] Specify an interface! Use --help for more info.")
 
 else:
     if default:
