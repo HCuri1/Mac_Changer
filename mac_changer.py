@@ -39,4 +39,5 @@ else:
     else:
             
         subprocess.call(["./changer.sh", interface, newMac])
+        print(f"\n[+] {interface} MAC Adress changed!")
             
