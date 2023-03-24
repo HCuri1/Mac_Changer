@@ -10,12 +10,10 @@ apt-get install macchanger
 ```
 
 # How to execute this program:
-
-Must be executed as sudo
-
 ```
 python3 mac_changer.py [options]
 ```
+Must be executed as sudo
 
 # Program options:
 
