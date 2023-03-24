@@ -1,2 +1,5 @@
+from subprocess import call
+
 def randomChange(interface):
-    print(interface)
+    
+    call("./random_changer.sh", interface)

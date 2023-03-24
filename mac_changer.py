@@ -20,23 +20,28 @@ default=options.default
 
 print("---- MAC Changer ----\n\n")
 
-if not newMac:
+if not interface:
     
-    random_change.randomChange(interface)
-    
-elif (newMac=="d"):
-    
-    default_change.defaultChange(interface)
+    print("[ERROR] Set an interface!")
 
 else:
-    
-    if check_mac.checkMac(newMac) == True:
+    if default:
         
-        subprocess.call(["./changer.sh", interface, newMac])
+        default_change.defaultChange(interface)
         
+    elif not newMac:
+        
+        random_change.randomChange(interface)
+
     else:
         
-        print("Invalid MAC Adress!")
+        if check_mac.checkMac(newMac) == True:
+            
+            subprocess.call(["./changer.sh", interface, newMac])
+            
+        else:
+            
+            print("Invalid MAC Adress!")
 
 
-print(f"\n[+] {interface} MAC Adress changed to {newMac}")
+    print(f"\n[+] {interface} MAC Adress changed to {newMac}")
