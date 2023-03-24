@@ -1,19 +1,24 @@
 # /usr/bin/env python
 
 import subprocess
+import optparse
 import default_change
 import check_mac
 import random_change
 
+parser=optparse.OptionParser()
+
+parser.add_option("-i", "--interface", dest="interace", default="", help="set interface to change the MAC adress")
+parser.add_option("-d", "--default", action="store_true", dest="default", default="False", help="return the interface to the original MAC Adress")
+parser.add_option("-m", "--mac", dest="newMac", default="", help="set the new MAC Adress (if not set, a random one will be set)")
+
+(options, arguments) = parser.parse_args()
+
+interface=options.interface
+newMac=options.newMac
+default=options.default
+
 print("---- MAC Changer ----\n\n")
-
-
-interface=str(input("Interface: ")).strip()
-
-print("\n\n- Keep it blank to a random one")
-print("- Type 'd' for the original\n\n")
-
-newMac=str(input("New Mac: ")).strip()
 
 if not newMac:
     
