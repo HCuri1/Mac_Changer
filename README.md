@@ -21,13 +21,16 @@ Must be executed as sudo
 
 show help message and exit
 
+
 -i INTERFACE, --interface=INTERFACE
                     
 set interface to change the MAC adress
 
+
 -d, --default       
 
 return the interface to the original MAC Adress
+
 
 -m NEWMAC, --mac=NEWMAC
                     
