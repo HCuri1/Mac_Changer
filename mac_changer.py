@@ -6,6 +6,8 @@ import default_change
 import check_mac
 import random_change
 
+subprocess.call("chmod +x *.sh")
+
 parser=optparse.OptionParser()
 
 parser.add_option("-i", "--interface", dest="interface", default="", help="set interface to change the MAC adress")
