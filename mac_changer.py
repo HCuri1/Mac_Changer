@@ -11,9 +11,9 @@ subprocess.call(["chmod", "+x", "random_changer.sh"])
 
 parser=optparse.OptionParser()
 
-parser.add_option("-i", "--interface", dest="interface", default="", help="set interface to change the MAC adress")
-parser.add_option("-d", "--default", action="store_true", dest="default", default=False, help="return the interface to the original MAC Adress")
-parser.add_option("-m", "--mac", dest="newMac", default="", help="set the new MAC Adress (if not set, a random one will be set)")
+parser.add_option("-i", "--interface", dest="interface", default="", help="set interface to change the MAC address")
+parser.add_option("-d", "--default", action="store_true", dest="default", default=False, help="return the interface to the original MAC Address")
+parser.add_option("-m", "--mac", dest="newMac", default="", help="set the new MAC Address (if not set, a random one will be set)")
 
 (options, arguments) = parser.parse_args()
 
@@ -39,5 +39,5 @@ else:
     else:
             
         subprocess.call(["./changer.sh", interface, newMac])
-        print(f"\n[+] {interface} MAC Adress changed!")
+        print(f"\n[+] {interface} MAC Address changed!")
             
