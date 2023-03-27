@@ -46,5 +46,6 @@ else:
         
         else:
             
+            print(output)
             print(f"\n[+] {interface} MAC Address changed!")
             
