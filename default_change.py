@@ -1,6 +1,14 @@
-from subprocess import call
+from subprocess import run
 
 def defaultChange (interface):
     
-    call(["./default_changer.sh", interface])
-    print(f"\n[+] {interface} MAC Address changed!")
+    output = run(["./default_changer.sh", interface], capture_output=True).stdout
+                    
+    if "New MAC" not in str(output):
+            
+        print("[-] Invalid interface!")
+            
+    else:
+                
+        print(output)
+        print(f"\n[+] {interface} MAC Address changed!")

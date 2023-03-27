@@ -37,7 +37,15 @@ else:
         random_change.randomChange(interface)
 
     else:
+        
+        output = subprocess.run(["./changer.sh", interface, newMac], capture_output=True).stdout
+                
+        if "New MAC" not in str(output):
+        
+            print("[-] Invalid interface or MAC Address!")
+        
+        else:
             
-        subprocess.call(["./changer.sh", interface, newMac])
-        print(f"\n[+] {interface} MAC Address changed!")
+            print(output)
+            print(f"\n[+] {interface} MAC Address changed!")
             
